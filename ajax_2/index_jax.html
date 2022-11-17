@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <hr />
+    <button onclick="click_me()">
+        Click me
+    </button>
+    <script>
+        var debug
+        function click_me() {
+
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/users",
+                success: result => {
+                    console.log(result);
+                    result.forEach(element => {
+                        document.write(JSON.stringify(element) + '<br/>')
+                    });
+                }});
+        }
+    </script>
+
+</body>
+
+</html>

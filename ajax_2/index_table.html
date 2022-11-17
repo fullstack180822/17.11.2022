@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <hr />
+    <table id="customers" border="1" style="padding:5px" cellpadding="7">
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+            </tr>
+            <!-- <tr>
+                <td>danny</td>
+                <td>20</td>
+            </tr> -->
+    </table>
+    <br />
+    <button onclick="click_me()">
+        Click me
+    </button>
+    <script>
+        var debug
+        function click_me() {
+            name = 'danny'
+            age = 20
+            $('#customers').append(`<tr><td>${name}</td><td>${age}</td><tr/>`)
+        }
+    </script>
+
+</body>
+
+</html>
